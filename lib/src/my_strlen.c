@@ -4,7 +4,7 @@
 ** File description:
 ** compute the lenght of an str
 */
-#include "my.h"
+#include "my_str.h"
 
 int my_strlen(char const *str)
 {

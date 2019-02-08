@@ -5,7 +5,7 @@
 ** copy an string into another
 */
 
-#include "my.h"
+#include "my_str.h"
 
 char *my_strcpy(char *dest, char const *str)
 {

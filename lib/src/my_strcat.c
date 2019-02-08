@@ -5,7 +5,7 @@
 ** concatenate 2 str
 */
 
-#include "my.h"
+#include "my_str.h"
 
 char *my_strcat(char **s1, char const *s2)
 {

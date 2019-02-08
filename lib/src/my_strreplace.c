@@ -5,7 +5,7 @@
 ** my_strreplace
 */
 
-#include "my.h"
+#include "my_str.h"
 
 static int first_str_occurence(char *str, char const *to_find)
 {

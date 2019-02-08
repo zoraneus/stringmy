@@ -8,7 +8,14 @@
 #ifndef MY_STR_H
 #define MY_STR_H
 
-#include "my.h"
+#include <stdlib.h>
+
+#ifndef BOOL_SYS
+    #define BOOL_SYS
+    #define TRUE 1
+    #define FALSE 0
+    typedef int my_bool_t;
+#endif
 
 /* Epitech standard lib pool function */
 

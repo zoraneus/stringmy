@@ -26,14 +26,27 @@ LIGHT_MAGEN	=	"\e[95m"
 LIGHT_CYAN	=	"\e[96m"
 LINE_RETURN	=	$(ECHO) ""
 
-NAME	=	g
+NAME	=	stringmy
 COLOR_THEME	=	$(MAGEN_C)
 MY_PATH	=	.
 INCLUDE_PATH	=	../include
 
-SRC_MY	=	pp_hitbox.c	\
-			animation.c	\
-			window_creation.c
+SRC_MY	=	src/my_char_is.c \
+		src/my_count_line.c \
+		src/my_getnbr.c \
+		src/my_line_lenght.c \
+		src/my_revstr.c \
+		src/my_strcat.c \
+		src/my_strcmp.c \
+		src/my_strcpy.c \
+		src/my_strdup.c \
+		src/my_str_isneg.c \
+		src/my_str_isnum.c \
+		src/my_strlen.c \
+		src/my_strreplace.c \
+		src/my_strstr.c \
+		src/my_str_to_line_arr.c \
+		src/my_str_to_word_arr.c
 
 CFLAGS	=	-Wall \
 			-W \
@@ -53,12 +66,12 @@ $(NAME):	$(OBJ)
 
 message:
 	@$(LINE_RETURN)
-	@$(ECHO) $(BOLD_T)$(COLOR_THEME)"  ____                 _     _      " $(DEFAULT)
-	@$(ECHO) $(BOLD_T)$(COLOR_THEME)" / ___|_ __ __ _ _ __ | |__ (_) ___ " $(DEFAULT)
-	@$(ECHO) $(BOLD_T)$(COLOR_THEME)"| |  _| '__/ _\` | '_ \| '_ \| |/ __|" $(DEFAULT)
-	@$(ECHO) $(BOLD_T)$(COLOR_THEME)"| |_| | | | (_| | |_) | | | | | (__ " $(DEFAULT)
-	@$(ECHO) $(BOLD_T)$(COLOR_THEME)" \____|_|  \__,_| .__/|_| |_|_|\___|" $(DEFAULT)
-	@$(ECHO) $(BOLD_T)$(COLOR_THEME)"                |_|                 " $(DEFAULT)
+	@$(ECHO) $(BOLD_T)$(COLOR_THEME)"  ______________________________ .___  _______     ________        _____  _____.___." $(DEFAULT)
+	@$(ECHO) $(BOLD_T)$(COLOR_THEME)" /   _____/\__    ___/\______   \|   | \      \   /  _____/       /     \ \__  |   |" $(DEFAULT)
+	@$(ECHO) $(BOLD_T)$(COLOR_THEME)" \_____  \   |    |    |       _/|   | /   |   \ /   \  ___      /  \ /  \ /   |   |" $(DEFAULT)
+	@$(ECHO) $(BOLD_T)$(COLOR_THEME)" /        \  |    |    |    |   \|   |/    |    \\    \_\  \    /    Y    \\____   |" $(DEFAULT)
+	@$(ECHO) $(BOLD_T)$(COLOR_THEME)"/_______  /  |____|    |____|_  /|___|\____|__  / \______  /    \____|__  // ______|" $(DEFAULT)
+	@$(ECHO) $(BOLD_T)$(COLOR_THEME)"        \/                    \/              \/         \/             \/ \/       " $(DEFAULT)
 	@$(LINE_RETURN)
 
 clean:

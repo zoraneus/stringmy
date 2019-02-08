@@ -5,7 +5,7 @@
 ** my_line_lenght
 */
 
-#include "my.h"
+#include "my_str.h"
 
 int my_line_lenght(char const *str)
 {

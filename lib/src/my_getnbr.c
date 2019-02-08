@@ -5,7 +5,7 @@
 ** my_getnbr
 */
 
-#include "my.h"
+#include "my_str.h"
 
 static int get_that_string_length(char const *str)
 {

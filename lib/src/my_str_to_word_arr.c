@@ -6,7 +6,6 @@
 */
 
 #include "my_str.h"
-#include <stdio.h>
 
 static int my_count_words(char const *str)
 {

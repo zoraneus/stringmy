@@ -5,7 +5,7 @@
 ** my_count_line
 */
 
-#include "my.h"
+#include "my_str.h"
 
 int my_count_line(char const *str)
 {

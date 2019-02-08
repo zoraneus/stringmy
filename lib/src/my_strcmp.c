@@ -5,7 +5,7 @@
 ** compare 2 strings
 */
 
-#include "my.h"
+#include "my_str.h"
 
 my_bool_t my_strcmp(char const *s1, char const *s2)
 {

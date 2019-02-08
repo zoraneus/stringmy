@@ -5,7 +5,7 @@
 ** define is an str contain exclusively digits
 */
 
-#include "my.h"
+#include "my_str.h"
 
 my_bool_t my_str_isnum(char const *str)
 {

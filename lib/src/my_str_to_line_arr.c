@@ -5,7 +5,7 @@
 ** my_str_to_line_arr
 */
 
-#include "my.h"
+#include "my_str.h"
 
 line_arr_t *my_str_to_line_arr(char const *str)
 {
