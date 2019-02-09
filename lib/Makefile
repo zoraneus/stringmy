@@ -46,7 +46,9 @@ SRC_MY	=	src/my_char_is.c \
 		src/my_strreplace.c \
 		src/my_strstr.c \
 		src/my_str_to_line_arr.c \
-		src/my_str_to_word_arr.c
+		src/my_str_to_word_arr.c \
+		src/my_atoi.c \
+		src/my_itoa.c
 
 CFLAGS	=	-Wall \
 			-W \
@@ -66,12 +68,12 @@ $(NAME):	$(OBJ)
 
 message:
 	@$(LINE_RETURN)
-	@$(ECHO) $(BOLD_T)$(COLOR_THEME)"   ______________________________ .___  _______     ________        _____  _____.___." $(DEFAULT)
-	@$(ECHO) $(BOLD_T)$(COLOR_THEME)"  /   _____/\__    ___/\______   \|   | \      \   /  _____/       /     \ \__  |   |" $(DEFAULT)
-	@$(ECHO) $(BOLD_T)$(COLOR_THEME)"  \_____  \   |    |    |       _/|   | /   |   \ /   \  ___      /  \ /  \ /   |   |" $(DEFAULT)
-	@$(ECHO) $(BOLD_T)$(COLOR_THEME)"  /        \  |    |    |    |   \|   |/    |    \\    \_\  \    /    Y    \\____   |" $(DEFAULT)
-	@$(ECHO) $(BOLD_T)$(COLOR_THEME)" /_______  /  |____|    |____|_  /|___|\____|__  / \______  /    \____|__  // ______|" $(DEFAULT)
-	@$(ECHO) $(BOLD_T)$(COLOR_THEME)"         \/                    \/              \/         \/             \/ \/       " $(DEFAULT)
+	@$(ECHO) $(BOLD_T)$(COLOR_THEME)"     ______________________________ .___  _______     ________        _____  _____.___." $(DEFAULT)
+	@$(ECHO) $(BOLD_T)$(COLOR_THEME)"    /   _____/\__    ___/\______   \|   | \      \   /  _____/       /     \ \__  |   |" $(DEFAULT)
+	@$(ECHO) $(BOLD_T)$(COLOR_THEME)"    \_____  \   |    |    |       _/|   | /   |   \ /   \  ___      /  \ /  \ /   |   |" $(DEFAULT)
+	@$(ECHO) $(BOLD_T)$(COLOR_THEME)"    /        \  |    |    |    |   \|   |/    |    \\    \_\  \    /    Y    \\____   |" $(DEFAULT)
+	@$(ECHO) $(BOLD_T)$(COLOR_THEME)"   /_______  /  |____|    |____|_  /|___|\____|__  / \______  /    \____|__  // ______|" $(DEFAULT)
+	@$(ECHO) $(BOLD_T)$(COLOR_THEME)"           \/                    \/              \/         \/             \/ \/       " $(DEFAULT)
 	@$(LINE_RETURN)
 
 clean:

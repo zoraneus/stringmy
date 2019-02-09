@@ -48,6 +48,10 @@ my_bool_t my_char_isuppercase(char c);
 my_bool_t my_char_islowercase(char c);
 my_bool_t my_char_isletter(char c);
 
+//conversion sys
+char *my_itoa(int nb);
+int my_atoi(char const *str);
+
 //  str to line arr  //
 struct line_arr {
     char **arr;
