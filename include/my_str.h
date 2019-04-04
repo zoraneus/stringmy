@@ -20,7 +20,6 @@ typedef int my_bool_t;
 /* Epitech standard lib pool function */
 
 int my_strlen(char const *str);
-int my_getnbr(char const *str);
 
 my_bool_t my_str_isnum(char const *str); //float with . ok
 my_bool_t my_str_isint(char const *str);
@@ -36,6 +35,10 @@ char *my_strncat(char **s1, char const *s2, int n);
 char *my_strdup(char const *src);
 char *my_strndup(char const *src, int n);
 my_bool_t my_strncmp(char const *s1, char const *s2, int n);
+
+// my_strtok.c
+char **my_strtok(char *src, char *tok);
+void my_strtok_destroy(char **str_arr);
 
 /* fonction created by guilian ganster */
 char *my_strreplace(char **str, char const *to_find, char const *substitute);

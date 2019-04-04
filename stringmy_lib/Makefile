@@ -33,7 +33,6 @@ INCLUDE_PATH	=	../include
 
 SRC_MY	=	src/my_char_is.c \
 		src/my_count_line.c \
-		src/my_getnbr.c \
 		src/my_line_lenght.c \
 		src/my_revstr.c \
 		src/my_strcat.c \
@@ -48,11 +47,11 @@ SRC_MY	=	src/my_char_is.c \
 		src/my_str_to_line_arr.c \
 		src/my_str_to_word_arr.c \
 		src/my_atoi.c \
-		src/my_itoa.c
+		src/my_itoa.c \
+		src/my_strtok.c
 
 CFLAGS	=	-Wall \
 			-W \
-			-Werror \
 			-I $(INCLUDE_PATH)
 
 SRCS	=	$(SRC_MY:%=$(MY_PATH)/%)
