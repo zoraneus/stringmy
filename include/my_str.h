@@ -39,6 +39,7 @@ my_bool_t my_strncmp(char const *s1, char const *s2, int n);
 // my_strtok.c
 char **my_strtok(char *src, char *tok);
 void my_strtok_destroy(char **str_arr);
+void remove_both_caracter(char **src, char to_remove);
 
 /* fonction created by guilian ganster */
 char *my_strreplace(char **str, char const *to_find, char const *substitute);

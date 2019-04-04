@@ -44,8 +44,6 @@ SRC_MY	=	src/my_char_is.c \
 		src/my_strlen.c \
 		src/my_strreplace.c \
 		src/my_strstr.c \
-		src/my_str_to_line_arr.c \
-		src/my_str_to_word_arr.c \
 		src/my_atoi.c \
 		src/my_itoa.c \
 		src/my_strtok.c

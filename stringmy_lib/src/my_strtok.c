@@ -6,7 +6,23 @@
 */
 
 #include "my_str.h"
-#include <stdio.h>
+
+void remove_both_caracter(char **src, char to_remove)
+{
+    char *buff = my_strdup(*src);
+    int pos_start = 0;
+    int pos_end = my_strlen(buff) - 1;
+
+    while (buff[pos_start] == to_remove && buff[pos_start] != '\0')
+        pos_start++;
+    if (pos_start == pos_end)
+        return;
+    while (buff[pos_end] == to_remove)
+        pos_end--;
+    free(*src);
+    *src = my_strndup(buff + pos_start, pos_end - pos_start + 1);
+    free(buff);
+}
 
 static int tok_len(char *str, char *tok)
 {
