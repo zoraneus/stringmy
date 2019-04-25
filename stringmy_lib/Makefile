@@ -26,29 +26,28 @@ LIGHT_MAGEN	=	"\e[95m"
 LIGHT_CYAN	=	"\e[96m"
 LINE_RETURN	=	$(ECHO) ""
 
-NAME	=	stringmy
-COLOR_THEME	=	$(YELLO_C)
-DEBUG_THEME =	$(CYAN_C)
-SRC_PATH	=	./
+NAME	        =	stringmy
+COLOR_THEME		=	$(YELLO_C)
+DEBUG_THEME     =	$(CYAN_C)
+SRC_PATH		=	./
 INCLUDE_PATH	=	../include
 
-SRC	=	src/my_char_is.c \
-		src/my_count_line.c \
-		src/my_line_lenght.c \
-		src/my_revstr.c \
-		src/my_strcat.c \
-		src/my_strcmp.c \
-		src/my_strcpy.c \
-		src/my_strdup.c \
-		src/my_str_isneg.c \
-		src/my_str_isnum.c \
-		src/my_strlen.c \
-		src/my_strreplace.c \
-		src/my_strstr.c \
-		src/my_atoi.c \
-		src/my_itoa.c \
-		src/my_strtok.c
-
+SRC		=	src/my_char_is.c \
+			src/my_count_line.c \
+			src/my_line_lenght.c \
+			src/my_revstr.c \
+			src/my_strcat.c \
+			src/my_strcmp.c \
+			src/my_strcpy.c \
+			src/my_strdup.c \
+			src/my_str_isneg.c \
+			src/my_str_isnum.c \
+			src/my_strlen.c \
+			src/my_strreplace.c \
+			src/my_strstr.c \
+			src/my_atoi.c \
+			src/my_itoa.c \
+			src/my_strtok.c
 
 CFLAGS	=	-Wall \
 			-Wextra \
@@ -89,7 +88,7 @@ fclean:	clean
 		$(RED_C)$(BOLD_T)"DELETED: "$(DEFAULT) \
 		$(LIGHT_RED)"Binary lib$(NAME).a"$(DEFAULT)
 
-re:		fclean all
+re:	fclean all
 
 debug: CFLAGS += $(DEBUG_FLAGS)
 debug: COLOR_THEME = $(DEBUG_THEME)
