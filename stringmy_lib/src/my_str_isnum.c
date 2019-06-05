@@ -7,30 +7,30 @@
 
 #include "my_str.h"
 
-my_bool_t my_str_isnum(char const *str)
+bool my_str_isnum(char const *str)
 {
     int i = 0;
     int negative = 0;
-    my_bool_t is_float = FALSE;
+    bool is_float = false;
     if (str[0] == '-'){
         i++;
         negative = 1;
     }
     while (str[i] != '\0'){
-        if (str[i] == '.' && is_float == FALSE){
-            is_float = TRUE;
+        if (str[i] == '.' && is_float == false){
+            is_float = true;
             i++;
         }
         if (my_char_isnumber(str[i]) == 0)
-            return FALSE;
+            return false;
         i++;
     }
     if (i >= negative + 1)
-        return TRUE;
-    return FALSE;
+        return true;
+    return false;
 }
 
-my_bool_t my_str_isint(char const *str)
+bool my_str_isint(char const *str)
 {
     int i = 0;
     int negative = 0;
@@ -40,10 +40,10 @@ my_bool_t my_str_isint(char const *str)
     }
     while (str[i] != '\0'){
         if (my_char_isnumber(str[i]) == 0)
-            return FALSE;
+            return false;
         i++;
     }
     if (i >= negative + 1)
-        return TRUE;
-    return FALSE;
+        return true;
+    return false;
 }
