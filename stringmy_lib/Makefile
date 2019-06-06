@@ -57,7 +57,9 @@ TEST_SRC	=	tests/test_my_strlen.c \
 				tests/test_my_strncat.c \
 				tests/test_my_strcmp.c \
 				tests/test_my_strncmp.c \
-				tests/test_my_strtok.c
+				tests/test_my_strtok.c \
+				tests/test_remove_both_caracter.c \
+				tests/test_my_strreplace.c
 
 CFLAGS		=	-Wall \
 				-Wextra \
