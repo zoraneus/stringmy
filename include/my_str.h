@@ -18,8 +18,6 @@ int my_strlen(char const *str);
 bool my_str_isnum(char const *str); //float with . ok
 bool my_str_isint(char const *str);
 
-char *my_revstr(char *str); //return NULL if fails
-char *my_strstr(char *str, char const *to_find); //return \0 if not match
 char *my_strcpy(char *dest, char const *str);
 char *my_strncpy(char *dest, char const *src, int n);
 char *my_strcat(char **s1, char const *s2);

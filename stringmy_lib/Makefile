@@ -34,7 +34,6 @@ INCLUDE_PATH	=	../include
 SRC		=	src/my_char_is.c \
 			src/my_count_line.c \
 			src/my_line_lenght.c \
-			src/my_revstr.c \
 			src/my_strcat.c \
 			src/my_strcmp.c \
 			src/my_strcpy.c \
@@ -50,7 +49,8 @@ SRC		=	src/my_char_is.c \
 
 TEST_SRC	=	tests/test_my_strlen.c \
 				tests/test_my_str_isnum.c \
-				tests/test_my_str_isint.c
+				tests/test_my_str_isint.c \
+				tests/test_my_revstr.c
 
 CFLAGS		=	-Wall \
 				-Wextra \
