@@ -49,7 +49,8 @@ SRC		=	src/my_char_is.c \
 TEST_SRC	=	tests/test_my_strlen.c \
 				tests/test_my_str_isnum.c \
 				tests/test_my_str_isint.c \
-				tests/test_my_strcpy.c
+				tests/test_my_strcpy.c \
+				tests/test_my_strncpy.c
 
 CFLAGS		=	-Wall \
 				-Wextra \
