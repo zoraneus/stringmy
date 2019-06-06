@@ -42,7 +42,6 @@ SRC		=	src/my_char_is.c \
 			src/my_str_isnum.c \
 			src/my_strlen.c \
 			src/my_strreplace.c \
-			src/my_strstr.c \
 			src/my_atoi.c \
 			src/my_itoa.c \
 			src/my_strtok.c
@@ -50,7 +49,7 @@ SRC		=	src/my_char_is.c \
 TEST_SRC	=	tests/test_my_strlen.c \
 				tests/test_my_str_isnum.c \
 				tests/test_my_str_isint.c \
-				tests/test_my_revstr.c
+				tests/test_my_strcpy.c
 
 CFLAGS		=	-Wall \
 				-Wextra \
