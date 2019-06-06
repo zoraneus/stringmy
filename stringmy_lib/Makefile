@@ -48,7 +48,9 @@ SRC		=	src/my_char_is.c \
 			src/my_itoa.c \
 			src/my_strtok.c
 
-TEST_SRC	=	tests/test_my_strlen.c
+TEST_SRC	=	tests/test_my_strlen.c \
+				tests/test_my_str_isnum.c \
+				tests/test_my_str_isint.c
 
 CFLAGS		=	-Wall \
 				-Wextra \
@@ -107,7 +109,7 @@ test_build:	fclean test_clean all $(TEST_OBJ)
 
 test_exec:
 	@$(ECHO) -n $(BOLD_T)$(LIGHT_GREEN) "   Test lib" $(NAME) ": " $(DEFAULT)
-	@./test_run
+	@./test_run --always-succeed
 
 test_clean:
 	@$(RM) $(TEST_OBJ)
