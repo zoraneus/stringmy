@@ -11,6 +11,8 @@ static long counter_set(int nb)
 {
     long counter = 10000000000000;
 
+    if (nb < 0)
+        nb = nb * -1;
     while (counter > nb)
         counter = counter / 10;
     return (counter);
@@ -41,8 +43,8 @@ char *my_itoa(int nb)
 
     if (!buff)
         return (NULL);
-    if (nb < 0)
-        buff[0] = '-';
+    buff[0] = '-';
+    nb = (nb < 0) ? nb * -1 : nb;
     if (nb == 0) {
         buff[0] = '0';
         buff[1] = '\0';

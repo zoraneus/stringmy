@@ -25,7 +25,7 @@ Test(my_itoa, basic_positive)
     free(nb4);
 }
 
-/* Test(my_itoa, basic_negative)
+Test(my_itoa, basic_negative)
 {
     char *nb1 = my_itoa(-1);
     char *nb2 = my_itoa(-10);
@@ -37,4 +37,4 @@ Test(my_itoa, basic_positive)
     free(nb1);
     free(nb2);
     free(nb3);
-}*/
+}
