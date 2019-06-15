@@ -28,10 +28,11 @@ bool my_strcmp(char const *s1, char const *s2);
 bool my_strncmp(char const *s1, char const *s2, int n);
 
 // my_strtok.c
-char **my_strtok(char *src, char *tok);
+char **my_strtok(char *src, char token);
 void my_strtok_destroy(char **str_arr);
 void remove_both_caracter(char **src, char to_remove);
 
+int my_str_toklen(char *src, char token);
 char *my_strreplace(char **str, char const *to_find, char const *substitute);
 
 /*  my char is   */

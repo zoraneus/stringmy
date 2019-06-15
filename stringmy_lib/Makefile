@@ -44,7 +44,8 @@ SRC		=	src/my_char_is.c \
 			src/my_strreplace.c \
 			src/my_atoi.c \
 			src/my_itoa.c \
-			src/my_strtok.c
+			src/my_strtok.c \
+			src/my_str_toklen.c
 
 TEST_SRC	=	tests/test_my_strlen.c \
 				tests/test_my_str_isnum.c \
@@ -58,6 +59,7 @@ TEST_SRC	=	tests/test_my_strlen.c \
 				tests/test_my_strcmp.c \
 				tests/test_my_strncmp.c \
 				tests/test_my_strtok.c \
+				tests/test_my_str_toklen.c \
 				tests/test_remove_both_caracter.c \
 				tests/test_my_strreplace.c
 

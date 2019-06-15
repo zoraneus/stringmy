@@ -8,51 +8,28 @@
 #include <criterion/criterion.h>
 #include "my_str.h"
 
-Test(my_strtok, basics)
+Test(my_strtok, basic)
 {
-    char **buff = my_strtok("value1;value2;value42", ";");
+    char **arr = my_strtok("aze", ',');
+    char **arr2 = my_strtok("aze,sq,fr", ',');
 
-    cr_assert_str_eq(buff[0], "value1");
-    cr_assert_str_eq(buff[1], "value2");
-    cr_assert_str_eq(buff[2], "value42");
-    cr_assert_eq(buff[3], NULL);
-    for (int i = 0; i < 3; i++)
-        free(buff[i]);
-    free(buff);
+    cr_assert_str_eq(arr[0], "aze");
+    cr_assert_eq(arr[1], NULL);
+    cr_assert_str_eq(arr2[0], "aze");
+    cr_assert_str_eq(arr2[1], "sq");
+    cr_assert_str_eq(arr2[2], "fr");
+    cr_assert_eq(arr2[3], NULL);
+    my_strtok_destroy(arr);
+    my_strtok_destroy(arr2);
 }
 
-Test(my_strtok, multiple_token)
+Test(my_strtok, multiple_separator)
 {
-    char **buff = my_strtok("value1;;value2", ";");
+    char **arr = my_strtok("aze,,sdq,,,gr", ',');
 
-    cr_assert_str_eq(buff[0], "value1");
-    cr_assert_str_eq(buff[1], "value2");
-    cr_assert_eq(buff[2], NULL);
-    for (int i = 0; i < 2; i++)
-        free(buff[i]);
-    free(buff);
-}
-
-Test(my_strtok, long_token)
-{
-    char **buff = my_strtok("value1; value2", "; ");
-
-    cr_assert_str_eq(buff[0], "value1");
-    cr_assert_str_eq(buff[1], "value2");
-    cr_assert_eq(buff[2], NULL);
-    for (int i = 0; i < 2; i++)
-        free(buff[i]);
-    free(buff);
-}
-
-Test(my_strtok, toekn_at_end)
-{
-    char **buff = my_strtok("value1;value2;", ";");
-
-    cr_assert_str_eq(buff[0], "value1");
-    cr_assert_str_eq(buff[1], "value2");
-    cr_assert_eq(buff[2], NULL);
-    for (int i = 0; i < 2; i++)
-        free(buff[i]);
-    free(buff);
+    cr_assert_str_eq(arr[0], "aze");
+    cr_assert_str_eq(arr[1], "sdq");
+    cr_assert_str_eq(arr[2], "gr");
+    cr_assert_eq(arr[3], NULL);
+    my_strtok_destroy(arr);
 }

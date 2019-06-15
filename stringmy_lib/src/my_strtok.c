@@ -24,64 +24,52 @@ void remove_both_caracter(char **src, char to_remove)
     free(buff);
 }
 
-static int tok_len(char *str, char *tok)
-{
-    int i = 0;
-    int c = 0;
-    int s_tok = my_strlen(tok);
-
-    while (str[i] != '\0') {
-        if (my_strncmp(str + i, tok, s_tok)) {
-            i += my_strlen(tok);
-            c++;
-        }
-        while (my_strncmp(str + i, tok, s_tok) == 1)
-            i += s_tok;
-        if (str[i] == '\0')
-            return ((my_strncmp(str + i - s_tok, tok, s_tok) ? c : c + 1));
-        i++;
-    }
-    return ((my_strncmp(str + i - s_tok, tok, s_tok)) ? c : c + 1);
-}
-
-static int tok_len_substring(char *str, char *tok)
+void my_strtok_destroy(char **arr)
 {
     int i = 0;
 
-    while (str[i] != '\0' && my_strncmp(str + i, tok, my_strlen(tok)) == 0)
+    while (arr[i]) {
+        free(arr[i]);
         i++;
-    return (i);
+    }
+    free(arr);
 }
 
-void my_strtok_destroy(char **str_arr)
+static int count_iteration(char *src, char token)
 {
+    int nb = 1;
     int i = 0;
 
-    while (str_arr[i]) {
-        free(str_arr[i]);
+    while (src[i] == token)
         i++;
+    while (src[i]) {
+        if (src[i] == token)
+            nb++;
+        while (src[i] == token)
+            i++;
+        if (src[i])
+            i++;
     }
-    free(str_arr);
+    if (src[i - 1] == token)
+        nb--;
+    return (nb);
+
 }
 
-char **my_strtok(char *str, char *tok)
+char **my_strtok(char *src, char token)
 {
-    int len = tok_len(str, tok);
-    char **buff = malloc(sizeof(char *) * (len + 1));
-    int size;
-    int j = 0;
-
-    if (buff == NULL)
-        return (NULL);
-    for (int i = 0; i < len; i++) {
-        size = tok_len_substring(str + j, tok);
-        buff[i] = my_strndup(str + j, size);
-        if (buff[i] == NULL) {
-            my_strtok_destroy(buff);
-            return (NULL);
-        }
-        j += size + 1;
+    int iteration = count_iteration(src, token);
+    char **arr = malloc(sizeof(char*) * (iteration + 1));
+    int offset = 0;
+    
+    while (src[offset] == token)
+        offset++;
+    for (int i = 0; i < iteration; i++) {
+        arr[i] = my_strndup(src + offset, my_str_toklen(src + offset, token));
+        offset += my_strlen(arr[i]);
+        while (src[offset] == token)
+            offset++;
     }
-    buff[len] = NULL;
-    return (buff);
+    arr[iteration] = NULL;
+    return (arr);
 }

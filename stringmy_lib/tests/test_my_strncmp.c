@@ -23,6 +23,6 @@ Test(my_strncmp, basics_lower_size)
 Test(my_strncmp, greater_size)
 {
     cr_assert_eq(my_strncmp("test", "test", 15), true);
-    cr_assert_eq(my_strncmp("test", "best", 15), true);
+    cr_assert_eq(my_strncmp("test", "best", 15), false);
     cr_assert_eq(my_strncmp("test", "test1", 42), false);
 }

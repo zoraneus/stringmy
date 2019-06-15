@@ -46,7 +46,7 @@ Test(remove_both_caracter, remove_both)
 
 Test(remove_both_caracter, remove_only_both)
 {
-    char *buff = "  plein de mots  ";
+    char *buff = my_strdup("  plein de mots  ");
 
     remove_both_caracter(&buff, ' ');
     cr_assert_str_eq(buff, "plein de mots");
