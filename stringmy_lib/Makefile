@@ -61,7 +61,10 @@ TEST_SRC	=	tests/test_my_strlen.c \
 				tests/test_my_strtok.c \
 				tests/test_my_str_toklen.c \
 				tests/test_remove_both_caracter.c \
-				tests/test_my_strreplace.c
+				tests/test_my_strreplace.c \
+				tests/test_my_char_is.c \
+				tests/test_my_itoa.c \
+				tests/test_my_atoi.c
 
 CFLAGS		=	-Wall \
 				-Wextra \

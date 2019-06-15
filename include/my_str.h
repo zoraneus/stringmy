@@ -42,7 +42,7 @@ bool my_char_islowercase(char c);
 bool my_char_isletter(char c);
 
 //conversion sys
-char *my_itoa(int nb);
+char *my_itoa(int nb); //unfunctional negative
 int my_atoi(char const *str);
 
 #endif //MY_STR_H
